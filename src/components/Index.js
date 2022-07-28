@@ -1,7 +1,8 @@
 import React, { useState, useRef } from "react";
 import { Router } from "@reach/router";
 import useAuth from "../hooks/useAuth";
-import useAPI, { API_URL } from "../api/api";
+// import useAPI, { API_URL } from "../api/api";
+import api, { API_URL } from '../api/api-nonHook';
 import jwt_decode from "jwt-decode";
 
 const Index = () => {
@@ -11,7 +12,7 @@ const Index = () => {
   const [consoleLog, setConsoleLog] = useState("");
 
   const { auth, setAuth } = useAuth();
-  const api = useAPI();
+  // const api = useAPI();
 
   const handleLogin = async (e) => {
     e.preventDefault();
